@@ -10,17 +10,30 @@
 
 </head>
 <body>
-<nav class = "topNavigationBar">TimeLine</nav>
+<nav class = "topNavigationBar"><img class = "logo" src="img/timelineLogo.png" alt="TimeLine Management Logo">TimeLine</nav>
+<div class = "navActions">
+  <span class = "filterButton"><span class="material-symbols-outlined filter" style = "position: relative; top:6px; left: -5px;">filter_list</span>Filter</span>
+  <span class = "addNewButton"><span class="material-symbols-outlined plus">add</span>Add New</span>
+</div>
 <div class = "bodyContent">
-  <div class = "navActions">
-    <span class = "filterButton"><span class="material-symbols-outlined" style = "position: relative; top:6px; left: -5px;">filter_list</span>Filter</span>
-    <span class = "addNewButton"><span class="material-symbols-outlined" style = "position: relative; top:6px; left: -5px;">add</span>Add New</span>
-  </div>
   <div class = "row subheading">
-    <span class = "column box-heading" id = "pending">Pending</span>
-    <span class = "column box-heading" id = "todo">To do</span>
-    <span class = "column box-heading" id = "inprogress">In Progress</span>
-    <span class = "column box-heading" id = "done">Done</span>
+    <span class = "column box-heading" id = "pending">Pending
+    <div class = "row box">
+      <span class="material-symbols-outlined vert">more_horiz</span>
+      <div class = "tags fullPaid"><span class = "tagText">.</span></div>
+      <div><div class = "topperName">Panda Topper</div>
+        <span class = "dueDate">15.03.2023</span>
+        <div class = "customerQuick"><span class="material-symbols-outlined accTag">account_circle</span><span>Rohit Valanki</span>
+        </div>
+      </div>
+    </div>
+    </span>
+    <span class = "column box-heading" id = "todo">To do
+    </span>
+    <span class = "column box-heading" id = "inprogress">In Progress
+    </span>
+    <span class = "column box-heading" id = "done">Done
+    </span>
   </div>
 </div>
 </body>

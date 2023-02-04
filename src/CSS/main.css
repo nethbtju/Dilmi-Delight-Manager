@@ -1,51 +1,69 @@
 .topNavigationBar{
-    background: #efefef;
+    background: #dedede;
     padding: 20px 20px 20px;
     border-bottom: 0.5px solid #cecece;
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
     font-size: 30px;
 }
-
+body {
+    background: #e7e7e7;
+    margin: 0;
+}
+.logo{
+    height: 30px;
+    position: relative;
+    top: 5px;
+    margin-right: 6px;
+}
 nav{
     z-index: -1;
 }
 
 .bodyContent{
-    background: #e7e7e7;
+    margin-inline: 6%;
 }
 .subheading{
     display: flex;
+    margin-bottom: 5px;
+    font-weight: bolder;
 }
 .navActions{
+    background: #f6f6f6;
+    padding-block: 10px;
     display: flex;
     justify-content: end;
     font-family: "Varela", sans-serif;
+    box-shadow: 0.5px 0.5px 1px #cccccc;
+}
+.plus {
+    position: relative;
+    top: 6px;
+    left: -5px;
 }
 .filterButton{
     width: 10%;
     text-align: center;
-    margin-top: 10px;
     margin-right: 1%;
     border-radius: 5px;
-    background: #d585e3;
+    background: #a2a2a2;
 }
 .addNewButton{
-    background: #b2c0ff;
+    background: #7a8cf8;
     padding-bottom: 8px;
+    margin-right: 1%;
     width: 10%;
     text-align: center;
-    margin-top: 10px;
-    margin-right: 5%;
     border-radius: 5px;
 }
 .filterButton:hover {
     cursor: pointer;
-    background: #ce61e1;
+    background: #737373;
+
 }
 .addNewButton:hover {
     cursor: pointer;
-    background: #727eec;
+    background: #414fc4;
 }
 .box-heading{
     font-family: "Poppins",sans-serif;
@@ -53,6 +71,63 @@ nav{
     flex: 40px;
 
 }
-body {
-    margin: 0;
+.eventBoxes{
+    display: flex;
+}
+.tags{
+    position: relative;
+    height: 10px;
+    top: -15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    transition: 1s;
+}
+
+.fullPaid{
+    background: #76bfa1;
+}
+.deposit{
+    background: #bf76b0;
+}
+.tags:hover{
+    width: 40%;
+    height: 25px;
+
+}
+.vert{
+    position: relative;
+    top: 12px;
+    left: 89%;
+    color: grey;
+}
+.deposit{
+    background: #ce61e1;
+}
+
+.box{
+    margin-top: 10px;
+    padding-inline: 10px;
+    flex: 40px;
+    padding-bottom: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+.topperName{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.dueDate{
+    background: #ff7979;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.customerQuick{
+    padding-top: 15px;
+}
+.accTag{
+    position: relative;
+    top:6px;
+    margin-right: 5px;
 }
