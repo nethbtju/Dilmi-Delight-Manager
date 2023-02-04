@@ -1,0 +1,58 @@
+.topNavigationBar{
+    background: #efefef;
+    padding: 20px 20px 20px;
+    border-bottom: 0.5px solid #cecece;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+nav{
+    z-index: -1;
+}
+
+.bodyContent{
+    background: #e7e7e7;
+}
+.subheading{
+    display: flex;
+}
+.navActions{
+    display: flex;
+    justify-content: end;
+    font-family: "Varela", sans-serif;
+}
+.filterButton{
+    width: 10%;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 1%;
+    border-radius: 5px;
+    background: #d585e3;
+}
+.addNewButton{
+    background: #b2c0ff;
+    padding-bottom: 8px;
+    width: 10%;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+.filterButton:hover {
+    cursor: pointer;
+    background: #ce61e1;
+}
+.addNewButton:hover {
+    cursor: pointer;
+    background: #727eec;
+}
+.box-heading{
+    font-family: "Poppins",sans-serif;
+    padding: 10px 15px 10px;
+    flex: 40px;
+
+}
+body {
+    margin: 0;
+}
