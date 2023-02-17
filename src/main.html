@@ -12,17 +12,64 @@
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script src="JS/addTopper.js"></script>
   <script type="text/javascript">
-    // window.onload = loadDisplay;
+    window.onload = loadDisplay;
   </script>
 </head>
 <body>
 <div value = "active" id = "viewBox" class = "viewBox">
   <div class = "viewWrapper">
-    <h3 style = "padding-left: 20px;">Panda Topper</h3>
-    <span class = "dueDate dueDateLarge">Due 15.03.2023</span>
-    <span class = "dueDateLarge fullPaid fullPaidLarge">Paid In Full</span>
-    <div class="material-symbols-outlined editIconLarge" id = "editButton">edit_note</div></button>
-
+    <div style = "width: 100%; display: flex;" class = "viewTop-wrapper">
+      <div class = "header-column" style = "flex: 30%; margin-right: 2%">
+        <h3 style = "padding-left: 5%;" id = "viewName" >Panda Topper</h3>
+      </div>
+      <div class = "header-column" style = "flex: 20%; margin-right: 2%">
+        <div class = "dueDate dueDateLarge" id = "viewDate"><input style = "width: 100%; background: transparent; border: transparent" type = "datetime-local" value = ""></div>
+      </div>
+      <div class = "header-column" style = "flex: 15%;">
+        <div class = "dueDateLarge fullPaid fullPaidLarge" id = "payment">
+          <label for="paymentType"></label><select style = "background: transparent; border: transparent; font-family: Helvetica, Arial, sans-serif;" id="paymentType" name="pay">
+          <option value="PIN">Paid In Full</option>
+          <option value="D50">Deposit 50%</option>
+            <option value="D25">Deposit 25%</option>
+        </select>
+        </div>
+      </div>
+      <div class = "header-column" style = "text-align: right; flex: 10%;">
+        <div class="material-symbols-outlined editIconLarge" id = "editButton">done</div>
+      </div>
+    </div>
+    <div style = "margin-left: 2%;" class = "viewBody">
+      <h5 class = "desTitle"><span class="material-symbols-outlined noteIcon">notes</span>Description</h5>
+      <form id = "desForm" action="#">
+        <div style = "margin-left: 5%; width: 80%;" class="mdl-textfield mdl-js-textfield">
+          <textarea class="mdl-textfield__input" type="text" rows= "3" id="description" ></textarea>
+          <label id = "descriptionField" class="mdl-textfield__label" for="description">Add Description...</label>
+        </div>
+      </form>
+      <h5 style = "position: relative; top: -25px;" class = "desTitle"><span class="material-symbols-outlined noteIcon">info</span>Topper Details</h5>
+      <div style = "position: relative; top: -25px; display: flex; width: 100%;" class = "detailCards">
+        <div class = "clientDetails-wrapper">
+          <span style = "font-size: 50px;" class="material-symbols-outlined noteIcon">account_circle</span>
+          <div class = "client-wrapper">
+            <label class = "clientTitle" for = "viewCName">Client Name</label>
+            <br>
+            <input class = "clientDetails" id = "viewCName" value = "Rohit Valanki">
+          </div>
+          <div class = "client-wrapper">
+            <label class = "clientTitle" for = "viewCNum">Client Number</label>
+            <br>
+            <input class = "clientDetails" id = "viewCNum" value = "0435 773 255">
+          </div>
+        </div>
+        <div class = "img-wrapper">
+          <span style = "font-size: 50px;" class="material-symbols-outlined">upload</span>
+          <form>
+            <label>Upload Image</label>
+            <input style = "position: relative; padding-inline: 15%; margin-top: 10%;" type = "file" name = "upload" accept = "image/*" id = "imgUpload"/>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div onclick="backFromView()" id = "blurBackground" class = "blurBackground"></div>

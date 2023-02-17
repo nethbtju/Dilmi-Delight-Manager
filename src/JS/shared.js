@@ -74,7 +74,7 @@ class Manager
         this._queue.splice(index, 1);
     };
 
-    getStudent(index)
+    getTopper(index)
     {
         let queue = this._queue;
         return queue[index];

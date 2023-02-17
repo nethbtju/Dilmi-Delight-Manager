@@ -35,7 +35,8 @@ function loadDisplay(){
                 <i class="material-symbols-outlined">more_horiz</i>
             </button>
           <div class = "tags fullPaid"><span class = "tagText"></span></div>
-          <div><div class = "topperName">${item._topperName}</div>
+          <div onclick="showView(${i})">
+          <div class = "topperName">${item._topperName}</div>
             <span class = "dueDate">${date}</span>
             <div class = "customerQuick"><span class="material-symbols-outlined accTag">account_circle</span><span>${item._clientName}</span>
             </div>
