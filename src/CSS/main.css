@@ -294,7 +294,9 @@ nav{
 .clientDetails{
     font-size: 15px;
     border-radius: 5px;
+    margin-left: 25%;
     text-align: center;
     background: #fcfcfc;
     border: transparent;
+    width: 50%;
 }

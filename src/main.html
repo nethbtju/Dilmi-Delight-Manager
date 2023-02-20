@@ -16,36 +16,41 @@
   </script>
 </head>
 <body>
-<div value = "active" id = "viewBox" class = "viewBox">
+<div value = "notActive" id = "viewBox" class = "viewBox">
   <div class = "viewWrapper">
     <div style = "width: 100%; display: flex;" class = "viewTop-wrapper">
       <div class = "header-column" style = "flex: 30%; margin-right: 2%">
         <h3 style = "padding-left: 5%;" id = "viewName" >Panda Topper</h3>
       </div>
       <div class = "header-column" style = "flex: 20%; margin-right: 2%">
-        <div class = "dueDate dueDateLarge" id = "viewDate"><input style = "width: 100%; background: transparent; border: transparent" type = "datetime-local" value = ""></div>
+        <div class = "dueDate dueDateLarge" id = "viewDate">
+          <input style = "width: 100%; background: transparent; border: transparent" type = "datetime-local" value = "">
+        </div>
       </div>
       <div class = "header-column" style = "flex: 15%;">
         <div class = "dueDateLarge fullPaid fullPaidLarge" id = "payment">
-          <label for="paymentType"></label><select style = "background: transparent; border: transparent; font-family: Helvetica, Arial, sans-serif;" id="paymentType" name="pay">
+          <label for="paymentType"></label>
+          <select style = "background: transparent; border: transparent; font-family: Helvetica, Arial, sans-serif;" id="paymentType" name="pay">
           <option value="PIN">Paid In Full</option>
           <option value="D50">Deposit 50%</option>
-            <option value="D25">Deposit 25%</option>
-        </select>
+          <option value="D25">Deposit 25%</option>
+          </select>
         </div>
       </div>
-      <div class = "header-column" style = "text-align: right; flex: 10%;">
-        <div class="material-symbols-outlined editIconLarge" id = "editButton">done</div>
+      <div value="edit" onclick="editView()" id = "button-view" class = "header-column" style = "text-align: right; flex: 10%;">
+        <div class="material-symbols-outlined editIconLarge" id = "editButton">edit</div>
       </div>
     </div>
     <div style = "margin-left: 2%;" class = "viewBody">
       <h5 class = "desTitle"><span class="material-symbols-outlined noteIcon">notes</span>Description</h5>
-      <form id = "desForm" action="#">
-        <div style = "margin-left: 5%; width: 80%;" class="mdl-textfield mdl-js-textfield">
-          <textarea class="mdl-textfield__input" type="text" rows= "3" id="description" ></textarea>
-          <label id = "descriptionField" class="mdl-textfield__label" for="description">Add Description...</label>
-        </div>
-      </form>
+      <div id = "description-wrapper">
+        <form id = "desForm" action="#">
+          <div style = "margin-left: 5%; width: 80%;" class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="description" ></textarea>
+            <label id = "descriptionField" class="mdl-textfield__label" for="description">Add Description...</label>
+          </div>
+        </form>
+      </div>
       <h5 style = "position: relative; top: -25px;" class = "desTitle"><span class="material-symbols-outlined noteIcon">info</span>Topper Details</h5>
       <div style = "position: relative; top: -25px; display: flex; width: 100%;" class = "detailCards">
         <div class = "clientDetails-wrapper">
@@ -53,20 +58,26 @@
           <div class = "client-wrapper">
             <label class = "clientTitle" for = "viewCName">Client Name</label>
             <br>
-            <input class = "clientDetails" id = "viewCName" value = "Rohit Valanki">
+            <div class = "clientDetails" id = viewCName>
+              Rohit Valanki
+            </div>
+            <!-- <input class = "clientDetails" id = "viewCName" value = "Rohit Valanki"> -->
           </div>
           <div class = "client-wrapper">
             <label class = "clientTitle" for = "viewCNum">Client Number</label>
             <br>
-            <input class = "clientDetails" id = "viewCNum" value = "0435 773 255">
+            <div class = "clientDetails" id = viewCNum>
+              0346578392
+            </div>
           </div>
         </div>
         <div class = "img-wrapper">
-          <span style = "font-size: 50px;" class="material-symbols-outlined">upload</span>
+          No Image
+          <!-- <span style = "font-size: 50px;" class="material-symbols-outlined">upload</span>
           <form>
             <label>Upload Image</label>
             <input style = "position: relative; padding-inline: 15%; margin-top: 10%;" type = "file" name = "upload" accept = "image/*" id = "imgUpload"/>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
