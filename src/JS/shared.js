@@ -2,11 +2,13 @@
 
 const APP_DATA_KEY = "managerAppData";
 class NewTopper{
-    constructor(topperName,dueDate,clientName,clientNum) {
+    constructor(topperName,dueDate,clientName,clientNum,payment,status) {
         this._topperName = topperName;
         this._dueDate = dueDate;
         this._clientName = clientName;
         this._clientNum = clientNum;
+        this._payment = payment;
+        this._status = status;
     }
 
     get topperName(){
@@ -25,12 +27,22 @@ class NewTopper{
         return this._clientNum;
     }
 
+    get payment() {
+        return this._payment;
+    }
+
+    get status() {
+        return this._status;
+    }
+
     fromData(topperObject)
     {
         this._topperName= topperObject._topperName;
         this._dueDate = topperObject._dueDate;
         this._clientName = topperObject._clientName;
         this._clientNum = topperObject._clientNum;
+        this._payment = topperObject._payment;
+        this._status = topperObject._status;
     }
 }
 
@@ -46,10 +58,10 @@ class Manager
         return this._queue;
     }
 
-    addTopper(topperName,dueDate,clientName,clientNum)
+    addTopper(topperName,dueDate,clientName,clientNum, payment, status)
     {
-        let queue = this._queue;
-        let topper = new NewTopper(topperName,dueDate,clientName,clientNum);
+        let queue = this.queue;
+        let topper = new NewTopper(topperName,dueDate,clientName,clientNum, payment,status);
         let index = 0;
         if (queue.length === 0 || (queue.length === 1 && queue[index]._dueDate <= dueDate)){
             queue.push(topper)
@@ -78,6 +90,11 @@ class Manager
     {
         let queue = this._queue;
         return queue[index];
+    }
+
+    updateTopper(index,topperName,dueDate,clientName,clientNum, payment, status){
+        let newTopper = new NewTopper(topperName,dueDate,clientName,clientNum,payment,status)
+        this.queue.splice(index,1, newTopper)
     }
 
     fromData(managerObject)
